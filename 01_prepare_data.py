@@ -7,10 +7,6 @@ main_dir = os.path.join(executive_path, 'Data')
 
 CLS_1 = 'Car'
 CLS_2 = 'Bike'
-# CLS_2 = 'meningioma_tumor'
-# CLS_3 = 'normal'
-# CLS_4 = 'pituitary_tumor'
-
 
 
 TRAIN_RATIO = 0.7
@@ -19,11 +15,9 @@ DATA_DIR = r'./images'
 
 raw_no_of_files = {}
 
-# classes = [CLS_1, CLS_2, CLS_3, CLS_4]
 classes = [CLS_1, CLS_2]
 number_of_samples = [
     (dir, len(os.listdir(os.path.join(main_dir, dir)))) for dir in classes]
-# print(number_of_samples)
 
 if not os.path.exists(DATA_DIR):
     os.mkdir(DATA_DIR)
@@ -43,11 +37,6 @@ for dir in (train_dir, valid_dir, test_dir):
     if not os.path.exists(dir):
         os.mkdir(dir)
 
-# train_list = [train_cls_1_dir, train_cls_2_dir,
-#               train_cls_3_dir, train_cls_4_dir]
-# valid_list = [valid_cls_1_dir, valid_cls_2_dir,
-#               valid_cls_3_dir, valid_cls_4_dir]
-# test_list = [test_cls_1_dir, test_cls_2_dir, test_cls_3_dir, test_cls_4_dir]
 
 train_list = [train_cls_1_dir, train_cls_2_dir]
 valid_list = [valid_cls_1_dir, valid_cls_2_dir]
@@ -87,11 +76,6 @@ for i, name in enumerate(cls_names):
 
 print("\nFiles are being copied to a final destination...\n")
 
-
-# train_idx_list = [train_idx_cls_1, train_idx_cls_2,
-#                   train_idx_cls_3, train_idx_cls_4]
-# valid_idx_list = [valid_idx_cls_1, valid_idx_cls_2,
-#                   valid_idx_cls_3, valid_idx_cls_4]
 
 train_idx_list = [train_idx_cls_1, train_idx_cls_2]
 valid_idx_list = [valid_idx_cls_1, valid_idx_cls_2]
